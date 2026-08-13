@@ -1,0 +1,8 @@
+base_view: omni__grouping_total_sales_volume
+label: New label topic
+
+default_filters:
+  terms_groups:
+    is: Tops
+
+joins: {}

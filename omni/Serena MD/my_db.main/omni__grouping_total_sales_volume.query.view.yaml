@@ -1,0 +1,27 @@
+# Reference this view as omni__grouping_total_sales_volume
+label: 🍋 Grouping - Total Sales Volume
+
+catalog: my_db
+schema: main
+query:
+  fields:
+    my_db_main__zara.terms: terms
+    my_db_main__zara.terms_groups: terms_groups
+    my_db_main__zara.sales_volume_sum: sales_volume_sum
+  base_view: my_db_main__zara
+  sorts:
+    - field: my_db_main__zara.sales_volume_sum
+      desc: true
+
+dimensions:
+  terms: {}
+  terms_groups: {}
+  sales_volume_sum: {}
+
+measures:
+  count:
+    aggregate_type: count
+
+  sales_volume_sum_median:
+    sql: ${omni__grouping_total_sales_volume.sales_volume_sum}
+    aggregate_type: median

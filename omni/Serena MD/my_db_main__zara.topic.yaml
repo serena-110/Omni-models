@@ -1,0 +1,13 @@
+label: My Db Main Zara
+
+fields:
+  [
+    all_views.*,
+    -my_db_main__zara.brand,
+    -my_db_main__zara.currency,
+    -my_db_main__zara.product_category,
+    -my_db_main__zara.scraped_at
+  ]
+
+# this is the my_db_main__zara topic
+joins: {}

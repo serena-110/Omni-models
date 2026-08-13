@@ -1,0 +1,38 @@
+# Reference this view as sql_query_view_16_08
+label: 🌼 Query
+
+sql: Select * from zara where price > 19.99 and seasonal = true
+
+dimensions:
+  brand: {}
+  url: {}
+  sku: {}
+  name: {}
+  description: {}
+  price: {}
+  currency: {}
+  scraped_at: {}
+  terms: {}
+  section: {}
+
+  product_id:
+    sql: '"Product ID"'
+
+  product_position:
+    sql: '"Product Position"'
+
+  promotion:
+    sql: '"Promotion"'
+
+  product_category:
+    sql: '"Product Category"'
+
+  seasonal:
+    sql: '"Seasonal"'
+
+  sales_volume:
+    sql: '"Sales Volume"'
+
+measures:
+  count:
+    aggregate_type: count
