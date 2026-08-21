@@ -2,6 +2,8 @@ default_numeric_locale: fi_FI
 
 default_row_limit: 1000
 
+facet_workbook_filters: true
+
 sets:
   child_set_2: [ my_db_main__zara.promotion, omni__grouping_total_sales_volume.terms ]
   child_set_1: [ my_db_main__zara.price, my_db_main__zara.name ]
