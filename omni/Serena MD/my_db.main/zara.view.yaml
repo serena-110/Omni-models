@@ -20,8 +20,7 @@ dimensions:
   section: {}
 
   terms:
-    faceting:
-      depends_on: [ product_position ]
+    sql: '"Terms"'
 
   product_id:
     sql: '"Product ID"'
@@ -29,6 +28,8 @@ dimensions:
 
   product_position:
     sql: '"Product Position"'
+    faceting:
+      depends_on: [ my_db_main__zara.product_position_copy ]
 
   promotion:
     sql: '"Promotion"'
@@ -82,6 +83,10 @@ dimensions:
     sql: COALESCE(${my_db_main__zara.price}, 0) + 90
     label: Calculation
     format: ""
+
+  product_position_copy:
+    sql: '"Product Position"'
+    label: Product Position Copy
 
 measures:
   total_sales_volume:
