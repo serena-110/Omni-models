@@ -29,7 +29,7 @@ dimensions:
   product_position:
     sql: '"Product Position"'
     faceting:
-      depends_on: [ my_db_main__zara.product_position_copy ]
+      depends_on: [ product_position_copy ]
 
   promotion:
     sql: '"Promotion"'
