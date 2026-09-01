@@ -86,7 +86,7 @@ dimensions:
 
   product_position_copy:
     sql: '"Product Position"'
-    label: Product Position Copy
+    label: Product Position New Label
 
 measures:
   total_sales_volume:
