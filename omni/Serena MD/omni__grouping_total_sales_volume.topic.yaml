@@ -9,10 +9,6 @@ joins: {}
 
 views:
   omni__grouping_total_sales_volume:
-    dimensions:
-      terms_groups:
-        hidden: true
-
     measures:
       newest_field:
         sql: COUNT(DISTINCT ${omni__grouping_total_sales_volume.terms})
