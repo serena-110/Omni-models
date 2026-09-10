@@ -2,7 +2,6 @@
 label: Retailer
 description: ""
 tags: []
-hidden: false
 
 catalog: my_db
 schema: main
@@ -73,7 +72,6 @@ dimensions:
         name: Bottoms
     else: Other
     label: Terms Groups
-    hidden: true
 
   calculation:
     sql: COALESCE(${my_db_main__zara.price}, 0) + 100
