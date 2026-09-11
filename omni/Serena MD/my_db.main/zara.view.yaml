@@ -14,9 +14,12 @@ dimensions:
   name: {}
   description: {}
   price: {}
-  currency: {}
   scraped_at: {}
   section: {}
+
+  currency:
+    sql: '"Currency"'
+    required_access_grants: [ testing ]
 
   terms:
     sql: '"Terms"'
