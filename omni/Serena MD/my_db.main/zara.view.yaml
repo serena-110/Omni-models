@@ -23,10 +23,18 @@ dimensions:
 
   terms:
     sql: '"Terms"'
+    order_by_field: terms_order
 
   product_id:
     sql: '"Product ID"'
     format: ID
+
+  terms_order:
+    sql: CASE WHEN ${my_db_main__zara.terms} = 'shoes' THEN '1' WHEN
+      ${my_db_main__zara.terms} = 'sweaters' THEN '2' WHEN
+      ${my_db_main__zara.terms} = 't-shirts' THEN '3' WHEN
+      ${my_db_main__zara.terms} = 'jackets' THEN '4' WHEN
+      ${my_db_main__zara.terms} = 'jeans' THEN '5' END
 
   product_position:
     sql: '"Product Position"'
