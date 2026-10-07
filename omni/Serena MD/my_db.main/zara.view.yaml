@@ -84,15 +84,20 @@ dimensions:
     else: Other
     label: Terms Groups
 
-  calculation:
+  ducks:
+    sql: '"Terms"'
+
+  ducks_calculation:
     sql: COALESCE(${my_db_main__zara.price}, 0) + 100
     label: Calculation
     format: ""
+    parent_field: ducks
 
   calculation_1:
     sql: COALESCE(${my_db_main__zara.price}, 0) + 90
     label: Calculation
     format: ""
+    parent_field: ducks
 
   product_position_copy:
     sql: '"Product Position"'
