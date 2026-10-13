@@ -1,0 +1,25 @@
+topics: [ my_db_main__zara, omni__grouping_total_sales_volume ]
+# shared_dimensions define how fields from different topics relate to each other.
+# Fields from all topics sharing the same logical value (e.g. a date) can be
+# aligned here so the composite topic can join on them.
+#
+# shared_dimensions:
+#   shared_date:
+#     mappings:
+#       topic_a:
+#         field: view_a.created_at
+#       topic_b:
+#         field: view_b.date
+#     label: "Date"
+
+# measures define computed fields from topic-scoped measures.
+#
+# measures:
+#   combined_count:
+#     sql: ${@topic_a.view_a.count} + ${@topic_b.view_b.count}
+#     label: "Combined Count"
+
+# shared_views are views (dimension tables) accessible across all topics.
+# Useful for constellation schema dimensions shared by multiple fact tables.
+#
+# shared_views: [region_info]
