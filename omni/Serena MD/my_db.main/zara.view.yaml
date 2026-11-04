@@ -93,6 +93,9 @@ dimensions:
     format: ""
     parent_field: ducks
 
+  hello:
+    sql: ${my_db_main__zara.brand}
+
   calculation_1:
     sql: COALESCE(${my_db_main__zara.price}, 0) + 90
     label: Calculation
